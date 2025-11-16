@@ -120,15 +120,23 @@ ul li a:hover {
 
   position: absolute;
   top: 50%;
-  left: 0;
-  right: initial;
+  /* left: 0;
+  right: initial; */
+
   z-index: 1;
   transform: translateY(-50%);
+  animation: slide-in-dark 0.2s ease-out forwards;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  /* right: 0;
+  left: initial; */
+  animation: slide-in 0.2s ease-out forwards;
+}
+
+/*efeito de mouse em cima do seletor de light e dark mode*/
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
 }
 
 #switch span {
@@ -172,11 +180,32 @@ footer {
   font-size: 14px;
 }
 
+/*adicionando background desktop */
+
 @media (min-width: 700px) {
   :root {
     --bg-url: url(./assets/bg-desktop.jpg);
   }
   .light {
     --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
+}
+
+/*animando botão track do light e dark mode */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-in-dark {
+  from {
+    right: 0;
+  }
+  to {
+    right: 50%;
   }
 }
