@@ -36,7 +36,8 @@ body * {
 
 #container {
   /* border: 1px solid red; */
-  width: 360px;
+  width: 100%;
+  max-width: 360px;
   margin: 56px auto 0px auto; /*Aplicando o espaço no 4 cantos, dando espaço nas informações*/
   padding-top: 0 24px;
   /* height: 712px; */
